@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import axios from "axios";
@@ -19,6 +20,7 @@ export default function RegisterPage() {
   const [agree, setAgree] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [token, setToken] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -54,10 +56,6 @@ export default function RegisterPage() {
         email: email,
         phone: phone.toString(),
         password: password,
-      }, {
-        headers: {
-          "Content-Type": "application/json",
-        },
       });
 
       const data = response.data;
@@ -68,7 +66,6 @@ export default function RegisterPage() {
       } else {
         alert(`สมัครสมาชิกไม่สำเร็จ: ${data?.message || "เกิดข้อผิดพลาด"}`);
       }
-
     } catch (error: any) {
       const errorMessage =
         error?.response?.data?.detail?.message ||
