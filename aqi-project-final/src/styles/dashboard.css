@@ -1,0 +1,51 @@
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 0;
+  grid-gap: 10px;
+  padding: 20px;
+}
+
+/* กล่อง AQI ด้านบน */
+.aqi-box {
+  grid-column: 1 / 4; /* ครอบ 3 คอลัมน์ */
+  background-color: #e1bee7;
+  height: 650px;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* กล่องด้านล่าง */
+.pm-box {
+  background-color: #ffe0b2;
+  height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.co2-box {
+  background-color: #ef9a9a;
+  height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.temp-box {
+  background-color: #a5d6a7;
+  height: 300px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .aqi-box {
+    grid-column: auto;
+  }
+}

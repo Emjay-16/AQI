@@ -1,0 +1,104 @@
+/* src/app/styles/sidebar.css  */
+.sidebar {
+  /* position: relative; */
+
+}
+
+.sidebar {
+  overflow: hidden;
+  z-index: 99;
+  position: absolute;
+  border-radius: 15px;
+  transition: width 0.2s linear;
+  background-color: #ffffff;
+  display: grid;
+  width: 70px;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.sidebar.open {
+  width: 300px;
+}
+
+.sidebar span {
+  display: none;
+}
+
+.sidebar.open span {
+  display: inline-block;
+}
+
+.icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.icon-menu .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 25px;
+
+}
+
+.icon-menu .logo img {
+  margin: 0;
+  width: 50px;
+}
+
+.icon-menu .logo span {
+  padding-top: 10px;
+}
+
+.menu-items {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.icon-menu .menu-item {
+  margin-bottom: 10px;
+  color: inherit; 
+  align-items: center;
+  display: flex;
+  border-radius: 15px;
+}
+
+.icon-menu .menu-item:hover {
+  background-color: #def1ff;
+}
+
+.icon-menu .menu-text {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0s ease;
+}
+
+.footer-menu {
+  display: flex;
+}
+
+.footer-menu .logout-button {
+  width: 100%;
+  border-radius: 15px;
+  background: #2196F3;
+  color: inherit; 
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer-menu:hover {
+  border-radius: 15px;
+}
+
+.icon-menu .menu-item span{
+  font-size: 20px;
+}

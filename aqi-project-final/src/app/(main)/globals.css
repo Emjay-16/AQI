@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar-area {
+  width: 100px; /* หรือปรับตามต้องการ */
+  background-color: #00ff11;
+  justify-content: center;
+}
+
+.content-area {
+  flex: 1;
+  height: 100vh;
+  background-color: #64b5f6;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (max-width: 768px) {
+  .Sidebar {
+    display: none;
+  }
+
+  .Content {
+    flex: 1;
+  }
+}

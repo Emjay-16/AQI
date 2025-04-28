@@ -1,0 +1,113 @@
+.user-management {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 20px;
+  padding: 32px;
+  font-family: 'Itim', sans-serif;
+  background-color: #f9f9fb;
+}
+  
+  .user-management h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .user-management p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .table-scroll {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px); 
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+  
+  .user-table th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+  }
+  
+  .user-table td:last-child,
+  .user-table th:last-child {
+    text-align: right;
+  }
+  
+  /* Badge */
+  .role-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .role-admin {
+    background-color: #4fc3f7;
+  }
+  
+  .role-owner {
+    background-color: #81c784;
+  }
+  
+  /* ปุ่มจัดการ */
+  .manage-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .manage-btn:hover {
+    color: #2196f3;
+  }
+  
+
+  .pagination-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .pagination-controls button {
+    margin: 0 4px;
+    padding: 4px 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .pagination-controls button.active {
+    color: #2196f3;
+    border-bottom: 2px solid #2196f3;
+  }
+  
+  .pagination-controls button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
