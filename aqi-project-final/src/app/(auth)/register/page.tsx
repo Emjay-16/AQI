@@ -61,8 +61,7 @@ export default function RegisterPage() {
       const data = response.data;
 
       if (data?.status === 1) {
-        alert("สมัครสมาชิกสำเร็จ! กรุณายืนยันอีเมลของคุณ");
-        router.push("/email-verified");
+        alert("สมัครสมาชิกสำเร็จ! กรุณายืนยันอีเมลของคุณ");       
       } else {
         alert(`สมัครสมาชิกไม่สำเร็จ: ${data?.message || "เกิดข้อผิดพลาด"}`);
       }
@@ -139,4 +138,3 @@ export default function RegisterPage() {
     </div>
   );
 }
-//export default RegisterPage;
